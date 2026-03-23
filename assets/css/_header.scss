@@ -20,6 +20,21 @@
     @media (max-width: $small-screen) {
       font-size: 1.8rem;
     }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &-img {
+      height: 2.2rem;
+      width: auto;
+
+      @media (max-width: $small-screen) {
+        height: 1.8rem;
+      }
+    }
   }
 
   &-nav {
