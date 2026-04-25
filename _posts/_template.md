@@ -3,10 +3,10 @@ layout: post
 published: false
 type: socratic
 title: "Seminário Socrático TODO"
-meetup: "https://www.meetup.com/BitDevsSSA/"
+event_url: ""
 ---
 <!--- TODO: remover `published: false` ao criar novo seminário socrático --->
-<!--- TODO: substituir link do meetup com https://www.meetup.com/BitDevsSSA/events/<##substituir##>/ --->
+<!--- TODO: preencher `event_url` com o link do evento na plataforma (ex: event.so) --->
 
 ## Anúncios
 Junte-se a nós para o nosso próximo Seminário Socrático.

@@ -1,41 +1,45 @@
-# BitDevs NYC
+# Salvador BitDevs
 
-Simple Jekyll site for hosting all of the links from meetups past and future.
+Site Jekyll do grupo Salvador BitDevs — hospeda os links e roteiros dos
+seminários socráticos passados e futuros.
 
-## Development
+## Desenvolvimento
 
-You'll need [Ruby & Jekyll](https://jekyllrb.com/docs/installation/) to run the
-site locally. Once they're setup:
+Requer Ruby (3.3+) e Bundler. A versão é fixada via [mise](https://mise.jdx.dev/).
 
-* Clone the repository and go into the directory
-* Run `bundle install`
-* Run `jekyll serve`
-* Go to http://localhost:4000
+```sh
+mise install
+bundle install
+make preview   # serve em http://localhost:4000
+```
 
-## Making a Post
+## Criando um post
 
-To make a new post, make a new file in `_posts/` with a title of
-`YYYY-MM-DD-title-goes-here`. At the top of the file you'll want to provide the
-following information:
+Copie `_posts/_template.md` para `_posts/YYYY-MM-DD-titulo.md` e preencha o
+front-matter:
 
 ```md
 ---
-layout: post # Always post
-type: socratic # or whitepaper for a whitepaper series
-title: "Name of the Post"
-meetup: https://www.meetup.com/BitDevsNYC/events/[event id here]/
+layout: post
+type: socratic
+title: "Nome do encontro"
+event_url: "https://event.so/<grupo>/<evento>"
 ---
 ```
 
-After that, it's just simple markdown. The site will auto-generate the rest.
+Marque `published: false` enquanto rascunha; remova ao publicar.
 
-## Changing Site Data
+## Configuração do site
 
-All site configurations are either contained in `_config.yml` or
-`_data/settings.yml`. Some data is duplicated between the two due to the way
-Jekyll injects variables, so be sure to update both.
+Configurações ficam em `_config.yml` e `_data/settings.yml`. Alguns valores
+estão duplicados pela forma como Jekyll injeta variáveis — atualize ambos.
 
-## Attributions
+## Deploy
 
-Thanks to [LeNPaul](https://github.com/LeNPaul/jekyll-starter-kit) for the
-Jekyll starter kit this was forked from.
+`master` é publicada automaticamente em `https://salvadorbitdevs.org` pelo
+workflow `.github/workflows/jekyll.yml` (GitHub Pages via Actions).
+
+## Atribuições
+
+Forkado do [jekyll-starter-kit](https://github.com/LeNPaul/jekyll-starter-kit)
+do LeNPaul.
